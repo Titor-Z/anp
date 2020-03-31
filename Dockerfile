@@ -17,7 +17,7 @@ RUN   sh  ./sys_init.sh \
 # 为 WEB 添加默认页面
 #
 WORKDIR /root/www/
-COPY ./pages/*  .
+COPY ./pages/  .
 
 #
 # Nginx 配置
@@ -32,4 +32,4 @@ VOLUME    /root/www/
 EXPOSE    80
 
 # 启动命令
-CMD [ "php-fpm", "nginx" ]
+ENTRYPOINT ["/cmd.sh"]

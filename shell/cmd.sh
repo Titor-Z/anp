@@ -1,0 +1,2 @@
+sh nginx && \
+php-fpm
